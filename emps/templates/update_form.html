@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" value="{{data.name}}" readonly><br>
+    <label for="mobile">Mobile:</label><br>
+    <input type="text" id="mobile" name="mobile" value="{{data.mobile}}"><br>
+    <label for="email">E-mail:</label><br>
+    <input type="text" id="email" name="email" value="{{data.email}}" readonly><br>
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age" value="{{data.age}}"><br>
+    <label for="address">Address:</label><br>
+    <input type="text" id="address" name="address" value="{{data.address}}"><br>
+    <label for="country">Country:</label><br>
+    <input type="text" id="country" name="country" value="{{data.country}}"><br><br>
+    <input type="submit" value="Submit">
+  </form>  
+{% endblock %}

@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% extends 'main.html' %}
+        {% block content%}
+        <form method="POST">
+            {% csrf_token %}
+        <label for="name">Userame:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter Username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" placeholder="Enter Password"><br><br>
+        <button>Login</button>
+        <a href="{% url 'forgot_password' %}">Forgot Password</a>
+        </form>
+        {% endblock %}
+    </body>
+</html>

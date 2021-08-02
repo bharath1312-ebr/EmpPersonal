@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+{% block content%}
+
+{% if user.is_authenticated %}
+   {% for i in data %}
+      <a href="{% url 'single_data' i.id %}">{{i.name}}</a> <br>
+      {% endfor %}
+{% else %}
+  You Haven't Login Yet, Please Click here <a href="{%url 'user_login'%}">Login</a>
+  {% endif %}
+{% endblock %}
